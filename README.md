@@ -49,7 +49,7 @@ git clone https://github.com/YOUR_USERNAME/metron-security-dashboard.git
 **2. Navigate to the project directory**
 
 ```bash
-cd metron-security-dashboard
+cd metron-dashboard
 ```
 
 **3. Install dependencies**
