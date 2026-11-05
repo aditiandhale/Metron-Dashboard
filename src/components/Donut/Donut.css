@@ -1,0 +1,15 @@
+.donut {
+  width: calc(var(--s) * 2);
+  max-width: 60vw;
+  flex: none;
+}
+.donut circle {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.donut-total {
+  cursor: pointer;
+  font-size: 7px;
+  font-weight: 700;
+  fill: var(--fg);
+}

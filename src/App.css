@@ -1,0 +1,30 @@
+/* mobile first: wrapping grid, page scrolls vertically */
+main {
+  padding: 16px;
+}
+.map {
+  --s: 88px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+}
+
+/* desktop: periodic-table diagram that fits the window (18 columns x 10 rows) */
+@media (min-width: 1101px) {
+  main {
+    height: calc(100dvh - var(--hh));
+    display: grid;
+    place-content: center;
+    padding: 20px;
+  }
+  .map {
+    --g: 6px;
+    --s: min(
+      calc((100vw - 40px - 17 * var(--g)) / 18),
+      calc((100dvh - var(--hh) - 40px - 9 * var(--g)) / 10)
+    );
+    grid-template-columns: repeat(18, var(--s));
+    grid-auto-rows: var(--s);
+    gap: var(--g);
+  }
+}

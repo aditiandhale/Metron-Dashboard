@@ -1,0 +1,44 @@
+/* bottom sheet on phones, centered card on larger screens */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sheet {
+  position: relative;
+  width: min(98vw, 740px);
+  max-width: none;
+  max-height: 90dvh;
+  overflow: auto;
+  padding: 20px 20px 28px;
+  font-size: 15px;
+  background: var(--card);
+  color: var(--fg);
+  border-top: 4px solid var(--c);
+  border-radius: 16px 16px 0 0;
+}
+.close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  padding: 4px 10px;
+  font-size: 28px;
+  line-height: 1;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+@media (min-width: 700px) {
+  .backdrop {
+    align-items: center;
+  }
+  .sheet {
+    width: 420px;
+    border-radius: 12px;
+  }
+}

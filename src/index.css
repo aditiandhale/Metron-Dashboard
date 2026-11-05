@@ -1,0 +1,46 @@
+:root {
+  --bg: #fff;
+  --fg: #12203a;
+  --card: #fff;
+  --line: #d5dcea;
+  --hh: 64px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1626;
+    --fg: #e6ecf8;
+    --card: #16213a;
+    --line: #2a3858;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.4 system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+@media (min-width: 900px) {
+  :root {
+    --hh: 72px;
+  }
+}
+@media (min-width: 1101px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+} /* desktop: whole diagram fits one screen */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
